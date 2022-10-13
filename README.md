@@ -3,4 +3,6 @@ Protótipo desenvolvido na disciplina Projeto de Desenvolvimento de Jogos - EP/P
 
 Semestre 2022/2
 
+Labyrinth's Tower Defense
+
 # Made with Godot!
