@@ -1,0 +1,5 @@
+Documento para relatorio de especificacoes etc
+
+Tamanho da janela: 
+
+https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html#mobile-game-in-portrait-mode

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.541176, 0.121569, 0.027451, 1 )
+
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
+size = Vector2( 100, 100 )
+center_offset = Vector3( 50, 50, 0 )
+
+[sub_resource type="QuadMesh" id=3]
+size = Vector2( 98, 98 )
+center_offset = Vector3( 50, 50, 1 )
+
+[node name="Game" type="Spatial"]
+
+[node name="Level" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Level"]
+transform = Transform( 1, 0, 0, 0, -0.00427607, 0.999991, 0, -0.999991, -0.00427607, 50, 100, -50 )
+
+[node name="Border" type="MeshInstance" parent="Level"]
+transform = Transform( 1, 0, 0, 0, 0.00287983, 1, 0, -1, 0.00287983, 0, 0, 0 )
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+
+[node name="Ground" type="MeshInstance" parent="Level"]
+transform = Transform( 1, 0, 0, 0, 0.00287983, 1, 0, -1, 0.00287983, 0, 0, 0 )
+mesh = SubResource( 3 )
+skeleton = NodePath("")
