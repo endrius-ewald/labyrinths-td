@@ -3,3 +3,10 @@ Documento para relatorio de especificacoes etc
 Tamanho da janela: 
 
 https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html#mobile-game-in-portrait-mode
+
+Import meshlibrary:
+
+https://www.youtube.com/watch?v=UGltqKZFxrs&ab_channel=Rainware
+
+Navigation easy:
+https://www.youtube.com/watch?v=4VRut0D9dXo&ab_channel=CanopyGames

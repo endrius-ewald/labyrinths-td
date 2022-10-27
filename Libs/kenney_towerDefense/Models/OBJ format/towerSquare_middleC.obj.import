@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/towerSquare_middleC.obj-be80a7f1a4a8d6113223c9bad449fa3c.mesh"
+
+[deps]
+
+files=[ "res://.import/towerSquare_middleC.obj-be80a7f1a4a8d6113223c9bad449fa3c.mesh" ]
+
+source_file="res://Libs/kenney_towerDefense/Models/OBJ format/towerSquare_middleC.obj"
+dest_files=[ "res://.import/towerSquare_middleC.obj-be80a7f1a4a8d6113223c9bad449fa3c.mesh", "res://.import/towerSquare_middleC.obj-be80a7f1a4a8d6113223c9bad449fa3c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

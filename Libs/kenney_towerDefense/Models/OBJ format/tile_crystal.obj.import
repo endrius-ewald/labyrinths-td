@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tile_crystal.obj-63afcb2ca15a6f2d747351ca8af36801.mesh"
+
+[deps]
+
+files=[ "res://.import/tile_crystal.obj-63afcb2ca15a6f2d747351ca8af36801.mesh" ]
+
+source_file="res://Libs/kenney_towerDefense/Models/OBJ format/tile_crystal.obj"
+dest_files=[ "res://.import/tile_crystal.obj-63afcb2ca15a6f2d747351ca8af36801.mesh", "res://.import/tile_crystal.obj-63afcb2ca15a6f2d747351ca8af36801.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

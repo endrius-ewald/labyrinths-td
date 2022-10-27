@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tile_endSpawn.obj-8c82b7cbd419b75ddfb1e8c28ded5eec.mesh"
+
+[deps]
+
+files=[ "res://.import/tile_endSpawn.obj-8c82b7cbd419b75ddfb1e8c28ded5eec.mesh" ]
+
+source_file="res://Libs/kenney_towerDefense/Models/OBJ format/tile_endSpawn.obj"
+dest_files=[ "res://.import/tile_endSpawn.obj-8c82b7cbd419b75ddfb1e8c28ded5eec.mesh", "res://.import/tile_endSpawn.obj-8c82b7cbd419b75ddfb1e8c28ded5eec.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
