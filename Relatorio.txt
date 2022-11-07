@@ -8,7 +8,13 @@ Import meshlibrary:
 
 https://www.youtube.com/watch?v=UGltqKZFxrs&ab_channel=Rainware
 
-Navigation easy:
+Navigation :
 https://www.youtube.com/watch?v=4VRut0D9dXo&ab_channel=CanopyGames
+
+	Izi mode:
+	https://www.youtube.com/watch?v=lOS2SptNiBM
+https://www.youtube.com/watch?v=XeX7waqNDzA
+https://godotengine.org/article/navigation-server-godot-4-0
+Td:
 
 https://youtu.be/ugNRDsl33OI?list=PLZ-54sd-DMAJltIzTtZ6ZhC-9hkqYXyp6
