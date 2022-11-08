@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/StartScreen.png-b3fdda836e1cbc89b6b58d8454a1a465.image"
+
+[deps]
+
+source_file="res://Objects/StartScreen.png"
+dest_files=[ "res://.import/StartScreen.png-b3fdda836e1cbc89b6b58d8454a1a465.image" ]
+
+[params]
+
