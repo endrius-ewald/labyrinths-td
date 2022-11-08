@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=2]
+[gd_scene load_steps=149 format=2]
 
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/detail_crystal.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/detail_tree.obj" type="ArrayMesh" id=2]
@@ -146,589 +146,457 @@
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/woodStructure.obj" type="ArrayMesh" id=144]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerSquare_topC.obj" type="ArrayMesh" id=145]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerSquare_topB.obj" type="ArrayMesh" id=146]
+[ext_resource path="res://Scenes/Towers/towerSquare_sampleD.gd" type="Script" id=147]
+
+[sub_resource type="SphereShape" id=1]
+radius = 3.0045
 
 [node name="Spatial" type="Spatial"]
 
 [node name="detail_crystal" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 1 )
 
 [node name="detail_crystalLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 43 )
 
 [node name="detail_dirt" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 4 )
 
 [node name="detail_dirtLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 30 )
 
 [node name="detail_rocks" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 39 )
 
 [node name="detail_rocksLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 54 )
 
 [node name="detail_tree" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 2 )
 
 [node name="detail_treeLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 18 )
 
 [node name="enemy_ufoGreen" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 53 )
 
 [node name="enemy_ufoGreenWeapon" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 15 )
 
 [node name="enemy_ufoPurple" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 16 )
 
 [node name="enemy_ufoPurpleWeapon" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 3 )
 
 [node name="enemy_ufoRed" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 21 )
 
 [node name="enemy_ufoRedWeapon" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 31 )
 
 [node name="enemy_ufoYellow" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 17 )
 
 [node name="enemy_ufoYellowWeapon" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 41 )
 
 [node name="snow_detail_crystal" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 63 )
 
 [node name="snow_detail_crystalLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 19 )
 
 [node name="snow_detail_dirt" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 57 )
 
 [node name="snow_detail_dirtLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 32 )
 
 [node name="snow_detail_rocks" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 64 )
 
 [node name="snow_detail_rocksLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 24 )
 
 [node name="snow_detail_tree" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 26 )
 
 [node name="snow_detail_treeLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 40 )
 
 [node name="snow_tile" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 56 )
 
 [node name="snow_tile_bump" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 20 )
 
 [node name="snow_tile_cornerInner" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 38 )
 
 [node name="snow_tile_cornerLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 25 )
 
 [node name="snow_tile_cornerOuter" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 61 )
 
 [node name="snow_tile_cornerRound" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 33 )
 
 [node name="snow_tile_cornerSquare" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 5 )
 
 [node name="snow_tile_crossing" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 60 )
 
 [node name="snow_tile_crystal" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 7 )
 
 [node name="snow_tile_end" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 22 )
 
 [node name="snow_tile_endRound" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 23 )
 
 [node name="snow_tile_endRoundSpawn" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 42 )
 
 [node name="snow_tile_endSpawn" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 27 )
 
 [node name="snow_tile_hill" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 44 )
 
 [node name="snow_tile_riverBridge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 55 )
 
 [node name="snow_tile_riverCorner" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 58 )
 
 [node name="snow_tile_riverFall" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 37 )
 
 [node name="snow_tile_riverSlope" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 52 )
 
 [node name="snow_tile_riverSlopeLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 28 )
 
 [node name="snow_tile_riverStraight" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 45 )
 
 [node name="snow_tile_riverTransition" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 36 )
 
 [node name="snow_tile_rock" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 6 )
 
 [node name="snow_tile_slope" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 29 )
 
 [node name="snow_tile_spawn" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 65 )
 
 [node name="snow_tile_spawnRound" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 59 )
 
 [node name="snow_tile_split" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 34 )
 
 [node name="snow_tile_straight" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 8 )
 
 [node name="snow_tile_straightHill" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 62 )
 
 [node name="snow_tile_straightHillLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 35 )
 
 [node name="snow_tile_transition" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 9 )
 
 [node name="snow_tile_tree" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 10 )
 
 [node name="snow_tile_treeDouble" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 46 )
 
 [node name="snow_tile_treeQuad" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 51 )
 
 [node name="snow_tile_wideCorner" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 11 )
 
 [node name="snow_tile_wideSplit" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 47 )
 
 [node name="snow_tile_wideStraight" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 48 )
 
 [node name="snow_tile_wideTransition" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 12 )
 
 [node name="snow_woodStructure" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 13 )
 
 [node name="snow_woodStructure_high" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 49 )
 
 [node name="tile" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 50 )
 
 [node name="tile_bump" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 14 )
 
 [node name="tile_cornerInner" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 90 )
 
 [node name="tile_cornerLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 119 )
 
 [node name="tile_cornerOuter" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 89 )
 
 [node name="tile_cornerRound" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 72 )
 
 [node name="tile_cornerSquare" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 73 )
 
 [node name="tile_crossing" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 115 )
 
 [node name="tile_crystal" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 105 )
 
 [node name="tile_dirt" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 106 )
 
 [node name="tile_dirtHigh" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 121 )
 
 [node name="tile_end" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 122 )
 
 [node name="tile_endRound" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 76 )
 
 [node name="tile_endRoundSpawn" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 66 )
 
 [node name="tile_endSpawn" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 97 )
 
 [node name="tile_hill" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 111 )
 
 [node name="tile_riverBridge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 116 )
 
 [node name="tile_riverCorner" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 113 )
 
 [node name="tile_riverFall" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 102 )
 
 [node name="tile_riverSlope" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 92 )
 
 [node name="tile_riverSlopeLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 126 )
 
 [node name="tile_riverStraight" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 99 )
 
 [node name="tile_riverTransition" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 86 )
 
 [node name="tile_rock" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 118 )
 
 [node name="tile_slope" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 101 )
 
 [node name="tile_spawn" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 93 )
 
 [node name="tile_spawnRound" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 103 )
 
 [node name="tile_split" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 98 )
 
 [node name="tile_straight" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 112 )
 
 [node name="tile_straightHill" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 94 )
 
 [node name="tile_straightHillLarge" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 77 )
 
 [node name="tile_transition" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 117 )
 
 [node name="tile_tree" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 71 )
 
 [node name="tile_treeDouble" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 67 )
 
 [node name="tile_treeQuad" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 110 )
 
 [node name="tile_wideCorner" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 91 )
 
 [node name="tile_wideSplit" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 120 )
 
 [node name="tile_wideStraight" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 74 )
 
 [node name="tile_wideTransition" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 95 )
 
 [node name="towerRound_base" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 82 )
 
 [node name="towerRound_bottomA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 114 )
 
 [node name="towerRound_bottomB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 96 )
 
 [node name="towerRound_bottomC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 127 )
 
 [node name="towerRound_crystals" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 123 )
 
 [node name="towerRound_middleA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 87 )
 
 [node name="towerRound_middleB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 104 )
 
 [node name="towerRound_middleC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 124 )
 
 [node name="towerRound_roofA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 125 )
 
 [node name="towerRound_roofB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 68 )
 
 [node name="towerRound_roofC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 78 )
 
 [node name="towerRound_sampleA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 128 )
 
 [node name="towerRound_sampleB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 100 )
 
 [node name="towerRound_sampleC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 107 )
 
 [node name="towerRound_sampleD" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 108 )
 
 [node name="towerRound_sampleE" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 109 )
 
 [node name="towerRound_sampleF" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 69 )
 
 [node name="towerRound_topA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 129 )
 
 [node name="towerRound_topB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 75 )
 
 [node name="towerRound_topC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 70 )
 
 [node name="towerSquare_bottomA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 84 )
 
 [node name="towerSquare_bottomB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 88 )
 
 [node name="towerSquare_bottomC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 79 )
 
 [node name="towerSquare_middleA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 80 )
 
 [node name="towerSquare_middleB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 81 )
 
 [node name="towerSquare_middleC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 83 )
 
 [node name="towerSquare_roofA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 85 )
 
 [node name="towerSquare_roofB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 137 )
 
 [node name="towerSquare_roofC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 135 )
 
 [node name="towerSquare_sampleA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 143 )
 
 [node name="towerSquare_sampleB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 138 )
 
 [node name="towerSquare_sampleC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 139 )
 
 [node name="towerSquare_sampleD" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4 )
 mesh = ExtResource( 134 )
+script = ExtResource( 147 )
+
+[node name="Range" type="Area" parent="towerSquare_sampleD"]
+
+[node name="CollisionShape" type="CollisionShape" parent="towerSquare_sampleD/Range"]
+shape = SubResource( 1 )
 
 [node name="towerSquare_sampleE" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 133 )
 
 [node name="towerSquare_sampleF" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 141 )
 
 [node name="towerSquare_topA" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 136 )
 
 [node name="towerSquare_topB" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 146 )
 
 [node name="towerSquare_topC" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 145 )
 
 [node name="weapon_ballista" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 140 )
 
 [node name="weapon_blaster" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 142 )
 
 [node name="weapon_cannon" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 131 )
 
 [node name="weapon_catapult" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 132 )
 
 [node name="woodStructure" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 144 )
 
 [node name="woodStructure_high" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5043, -22.1606, -35.2774 )
 mesh = ExtResource( 130 )
+
+[connection signal="body_entered" from="towerSquare_sampleD/Range" to="towerSquare_sampleD" method="_on_Range_body_entered"]
+[connection signal="body_exited" from="towerSquare_sampleD/Range" to="towerSquare_sampleD" method="_on_Range_body_exited"]
