@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snow_detail_dirtLarge.obj-83be8318607ad02a31e45c5fbbb77f22.mesh"
+
+[deps]
+
+files=[ "res://.import/snow_detail_dirtLarge.obj-83be8318607ad02a31e45c5fbbb77f22.mesh" ]
+
+source_file="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/snow_detail_dirtLarge.obj"
+dest_files=[ "res://.import/snow_detail_dirtLarge.obj-83be8318607ad02a31e45c5fbbb77f22.mesh", "res://.import/snow_detail_dirtLarge.obj-83be8318607ad02a31e45c5fbbb77f22.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

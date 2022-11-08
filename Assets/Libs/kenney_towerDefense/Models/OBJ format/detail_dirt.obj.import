@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detail_dirt.obj-8bf0337c9c7e3df95639c8bab59752e2.mesh"
+
+[deps]
+
+files=[ "res://.import/detail_dirt.obj-8bf0337c9c7e3df95639c8bab59752e2.mesh" ]
+
+source_file="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/detail_dirt.obj"
+dest_files=[ "res://.import/detail_dirt.obj-8bf0337c9c7e3df95639c8bab59752e2.mesh", "res://.import/detail_dirt.obj-8bf0337c9c7e3df95639c8bab59752e2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

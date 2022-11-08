@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/towerRound_topA.obj-725385df116409052e9d54644b1f44ca.mesh"
+
+[deps]
+
+files=[ "res://.import/towerRound_topA.obj-725385df116409052e9d54644b1f44ca.mesh" ]
+
+source_file="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerRound_topA.obj"
+dest_files=[ "res://.import/towerRound_topA.obj-725385df116409052e9d54644b1f44ca.mesh", "res://.import/towerRound_topA.obj-725385df116409052e9d54644b1f44ca.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

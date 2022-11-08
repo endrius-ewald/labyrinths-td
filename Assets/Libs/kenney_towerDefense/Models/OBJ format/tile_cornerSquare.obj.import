@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tile_cornerSquare.obj-503fbab43bab78bb875b52120f135999.mesh"
+
+[deps]
+
+files=[ "res://.import/tile_cornerSquare.obj-503fbab43bab78bb875b52120f135999.mesh" ]
+
+source_file="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/tile_cornerSquare.obj"
+dest_files=[ "res://.import/tile_cornerSquare.obj-503fbab43bab78bb875b52120f135999.mesh", "res://.import/tile_cornerSquare.obj-503fbab43bab78bb875b52120f135999.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

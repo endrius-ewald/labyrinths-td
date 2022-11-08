@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snow_tile_wideCorner.obj-086d62fb661468c6be8f86a606ff016c.mesh"
+
+[deps]
+
+files=[ "res://.import/snow_tile_wideCorner.obj-086d62fb661468c6be8f86a606ff016c.mesh" ]
+
+source_file="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/snow_tile_wideCorner.obj"
+dest_files=[ "res://.import/snow_tile_wideCorner.obj-086d62fb661468c6be8f86a606ff016c.mesh", "res://.import/snow_tile_wideCorner.obj-086d62fb661468c6be8f86a606ff016c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

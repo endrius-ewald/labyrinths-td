@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/towerRound_sampleC.obj-05e8f660cf1879d6d38fb7c8f4b2651e.mesh"
+
+[deps]
+
+files=[ "res://.import/towerRound_sampleC.obj-05e8f660cf1879d6d38fb7c8f4b2651e.mesh" ]
+
+source_file="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerRound_sampleC.obj"
+dest_files=[ "res://.import/towerRound_sampleC.obj-05e8f660cf1879d6d38fb7c8f4b2651e.mesh", "res://.import/towerRound_sampleC.obj-05e8f660cf1879d6d38fb7c8f4b2651e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
