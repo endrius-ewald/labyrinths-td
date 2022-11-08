@@ -7,10 +7,14 @@ export(NodePath) var alvoPath
 onready var alvo : Position3D = get_node(alvoPath)
 onready var navigation_agent = $NavigationAgent
 
+signal kamikaze
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	navigation_agent.set_target_location(alvo.global_transform.origin)
+	
+	#self.connect("kamikaze", "res://Scenes/MainScenes/UI.gd", "lossLife")
+	
 	pass # Replace with function body.
 
 
@@ -31,5 +35,10 @@ func _process(delta: float) -> void:
 
 
 func _on_NavigationAgent_target_reached():
+	kamikaze()
 	queue_free()
 	pass # Replace with function body.
+
+func kamikaze():
+	print("KAMIKAZEE")
+	emit_signal("kamikaze")
