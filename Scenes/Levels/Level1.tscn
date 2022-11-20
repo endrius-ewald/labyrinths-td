@@ -23,7 +23,7 @@ agent_radius = 0.25
 agent_max_climb = 0.1
 
 [sub_resource type="BoxShape" id=5]
-extents = Vector3( 10, 1, 10 )
+extents = Vector3( 20, 0.19, 20 )
 
 [node name="Level" type="Spatial"]
 
@@ -41,7 +41,6 @@ skeleton = NodePath("")
 [node name="Navigation" type="Navigation" parent="."]
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0045433, -0.027074, -0.00235462 )
 navmesh = SubResource( 4 )
 
 [node name="GridMap" type="GridMap" parent="Navigation/NavigationMeshInstance"]
@@ -57,45 +56,49 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="Tower" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 1 )]
+[node name="TowerContainer" type="Spatial" parent="Navigation/NavigationMeshInstance"]
+
+[node name="Tower" parent="Navigation/NavigationMeshInstance/TowerContainer" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11427, 0.223531, -5.10986 )
 
-[node name="Enemie" parent="Navigation" instance=ExtResource( 3 )]
+[node name="EnemieContainer" type="Spatial" parent="Navigation"]
+
+[node name="Enemie" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39088, 0.5, -15.5 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
-[node name="Enemie2" parent="Navigation" instance=ExtResource( 3 )]
+[node name="Enemie2" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27185, 1, -15.5 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
-[node name="Enemie3" parent="Navigation" instance=ExtResource( 3 )]
+[node name="Enemie3" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.58739, 2.91594, -15.5 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
-[node name="Enemie4" parent="Navigation" instance=ExtResource( 3 )]
+[node name="Enemie4" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84964, 0.784, -15.5 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
-[node name="Enemie5" parent="Navigation" instance=ExtResource( 3 )]
+[node name="Enemie5" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37262, 1.568, -15.5 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
-[node name="Enemie6" parent="Navigation" instance=ExtResource( 3 )]
+[node name="Enemie6" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70172, 2.352, -15.5 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
-[node name="Enemie7" parent="Navigation" instance=ExtResource( 3 )]
+[node name="Enemie7" parent="Navigation/EnemieContainer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78176, 1, -3.65505 )
-alvoPath = NodePath("../../Target")
+alvoPath = NodePath("../../../Target")
 
 [node name="Target" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.37755, 0.25, -0.611699 )
 
-[node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.372745, 0 )
+[node name="MapColider" type="StaticBody" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.145914, 0 )
+[node name="CollisionShape" type="CollisionShape" parent="MapColider"]
 shape = SubResource( 5 )
 
-[connection signal="bake_finished" from="Navigation/NavigationMeshInstance" to="Navigation/NavigationMeshInstance/Tower" method="_on_NavigationMeshInstance_bake_finished"]
+[connection signal="bake_finished" from="Navigation/NavigationMeshInstance" to="Navigation/NavigationMeshInstance/TowerContainer/Tower" method="_on_NavigationMeshInstance_bake_finished"]
