@@ -28,3 +28,8 @@ func _on_Range_body_exited(body: Node) -> void:
 	enemies.erase(body)
 	print(enemies)
 	pass # Replace with function body.
+
+
+func _on_NavigationMeshInstance_bake_finished() -> void:
+	print("BAKE FINISHED")
+	pass # Replace with function body.

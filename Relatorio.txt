@@ -1,20 +1,27 @@
 Documento para relatorio de especificacoes etc
 
-Tamanho da janela: 
+TAMANHO DA JANELA: 
 
 https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html#mobile-game-in-portrait-mode
 
-Import meshlibrary:
+IMPORT MESHLIB:
 
 https://www.youtube.com/watch?v=UGltqKZFxrs&ab_channel=Rainware
 
-Navigation :
+NAVIGATION:
 https://www.youtube.com/watch?v=4VRut0D9dXo&ab_channel=CanopyGames
+
+Precisa colocar as torres como filhos do navMeshInstace senao elas nao interferem na navegacao e as naves cruzam elas. 
 
 	Izi mode:
 	https://www.youtube.com/watch?v=lOS2SptNiBM
-https://www.youtube.com/watch?v=XeX7waqNDzA
-https://godotengine.org/article/navigation-server-godot-4-0
-Td:
+	https://www.youtube.com/watch?v=XeX7waqNDzA
+	https://godotengine.org/article/navigation-server-godot-4-0
 
+
+TD 2D DEMO:
 https://youtu.be/ugNRDsl33OI?list=PLZ-54sd-DMAJltIzTtZ6ZhC-9hkqYXyp6
+
+
+UI CONTROL:
+Precisa setar a propriedade mouse filter pra ignore pra poder usar a UI e clicar no jogo por baixo. 

@@ -21,3 +21,4 @@ shape = SubResource( 1 )
 
 [connection signal="target_reached" from="NavigationAgent" to="." method="_on_NavigationAgent_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent" to="." method="_on_NavigationAgent_velocity_computed"]
+[connection signal="input_event" from="RigidBody" to="." method="_on_RigidBody_input_event"]

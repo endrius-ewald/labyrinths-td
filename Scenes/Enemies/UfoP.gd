@@ -1,7 +1,7 @@
 extends Spatial
 
-
-var SPEED = 1.0 #5.0
+#TODO: tunar
+var SPEED = 0.5 #5.0
 #var path = []
 export(NodePath) var alvoPath
 onready var alvo : Position3D = get_node(alvoPath)
@@ -32,13 +32,22 @@ func _process(delta: float) -> void:
 	
 	#Move object
 	global_transform.origin += direction * step_size  #?navigation_agent.set_velocity(global_transform.origin) for colision avoidence
-
+	
+	#rotate for animation
+	rotate_y(deg2rad(180*delta))
+	
 
 func _on_NavigationAgent_target_reached():
-	kamikaze()
+	kamikazeee()
 	queue_free()
 	pass # Replace with function body.
 
-func kamikaze():
+func kamikazeee():
 	print("KAMIKAZEE")
 	emit_signal("kamikaze")
+
+
+func _on_RigidBody_input_event(camera: Node, event: InputEvent, position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		print("mouse click ufo")
+	pass # Replace with function body.
