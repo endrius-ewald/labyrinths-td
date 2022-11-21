@@ -99,6 +99,9 @@ func build_tower(arg):
 	clean_build_menu()
 	in_menu = false
 	
+	var navmesh = level.get_node("Navigation").get_node("NavigationMeshInstance")
+	navmesh.bake_navigation_mesh(false)
+	
 func clean_build_menu():
 	ui.get_node("BuildMenu").queue_free()
 

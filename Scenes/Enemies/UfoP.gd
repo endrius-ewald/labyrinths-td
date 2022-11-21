@@ -1,7 +1,7 @@
 extends Spatial
 
 #TODO: tunar
-var SPEED = 0.1 #5.0
+var SPEED = 0.5 #5.0
 #var path = []
 export(NodePath) var alvoPath
 onready var alvo : Position3D = get_node(alvoPath)
