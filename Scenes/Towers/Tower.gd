@@ -20,13 +20,13 @@ func _ready() -> void:
 
 func _on_Range_body_entered(body: Node) -> void:
 	enemies.append(body)
-	print(enemies)
+	#print(enemies)
 	pass # Replace with function body.
 
 
 func _on_Range_body_exited(body: Node) -> void:
 	enemies.erase(body)
-	print(enemies)
+	#print(enemies)
 	pass # Replace with function body.
 
 

@@ -25,3 +25,15 @@ https://youtu.be/ugNRDsl33OI?list=PLZ-54sd-DMAJltIzTtZ6ZhC-9hkqYXyp6
 
 UI CONTROL:
 Precisa setar a propriedade mouse filter pra ignore pra poder usar a UI e clicar no jogo por baixo. 
+
+CLICK_3D:
+
+Precisa criar um colisor para detectar colisao de raio
+https://godotengine.org/qa/72841/moving-a-kinematicbody-to-mouse-click-on-gridmap
+https://godotengine.org/qa/71492/how-do-i-click-and-move-on-3d
+
+Ou pode tambem usar o signal input_event de colision_object que colide com o mapa
+https://www.youtube.com/watch?v=U5qGj8qt7VU&t=80s&ab_channel=DavetheDev
+
+MOB_SPAWN:
+
