@@ -46,7 +46,7 @@ func _on_MobTimer_timeout() -> void:
 	le_mob.alvoPath = target.get_path()
 	
 	#mob position
-#	le_mob.translation.x = mob_position_x
+	le_mob.translation.x = mob_position_x
 #	le_mob.translation.y = 0.5 #automaticamente ajustado pelo navagent
 	le_mob.translation.z = -15.5
 

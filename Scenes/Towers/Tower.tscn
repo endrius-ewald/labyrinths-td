@@ -17,5 +17,8 @@ mesh = ExtResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="Range"]
 shape = SubResource( 1 )
 
+[node name="ShootTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Range" to="." method="_on_Range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_Range_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

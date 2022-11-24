@@ -6,6 +6,7 @@ extends Spatial
 # var b: String = "text"
 
 var enemies = []
+var proj = preload("res://Scenes/Projectile.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +21,10 @@ func _ready() -> void:
 
 func _on_Range_body_entered(body: Node) -> void:
 	enemies.append(body)
+	
+	if $ShootTimer.is_stopped():
+#		$ShootTimer.start()
+		pass
 	#print(enemies)
 	pass # Replace with function body.
 
@@ -32,4 +37,21 @@ func _on_Range_body_exited(body: Node) -> void:
 
 func _on_NavigationMeshInstance_bake_finished() -> void:
 	print("BAKE FINISHED")
+	pass # Replace with function body.
+
+
+func _on_ShootTimer_timeout() -> void:
+	print("Shoot")
+	$ShootTimer.start()
+	
+	if(enemies.size() > 0):
+		var bullet = proj.instance()
+		bullet.global_transform.origin = global_transform.origin
+		bullet.global_transform.origin.y = 2
+		
+		add_child(bullet)
+	
+
+		bullet.target = enemies[0]
+	
 	pass # Replace with function body.
