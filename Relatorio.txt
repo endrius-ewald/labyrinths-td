@@ -41,6 +41,7 @@ https://docs.godotengine.org/en/3.5/getting_started/first_2d_game/05.the_main_ga
 
 SIGNALS:
 https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html
+http://kidscancode.org/godot_recipes/3.x/basics/node_communication/
 
 $Child.connect("signal_name", object_with_method, "method_on_the_object")
 <emitting_node>.connect("signal_name", <target_node>, "target_method_name")

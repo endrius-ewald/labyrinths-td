@@ -44,7 +44,7 @@ func _on_MobTimer_timeout() -> void:
 	else:
 		$MobTimer.stop()
 	
-	$MobTimer.wait_time = rand_range(1,3)#spawna um mob entre 0 e 3 segundos. Pode ser modificado para variar dificuldade
+	$MobTimer.wait_time = rand_range(1,1)#,3)#spawna um mob entre 0 e 3 segundos. Pode ser modificado para variar dificuldade
 	
 	var mob_position_x = randi() % 7 + 2#posiciona o mob em algum lugar ao longo do eixo X do mapa
 	

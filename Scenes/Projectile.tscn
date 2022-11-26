@@ -12,14 +12,14 @@ height = 0.1
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 1 )
 
-[node name="RigidBody" type="RigidBody" parent="."]
-mode = 3
-axis_lock_linear_y = true
+[node name="Area" type="Area" parent="."]
+collision_layer = 8
 
-[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+[node name="MeshInstance" type="MeshInstance" parent="Area"]
 mesh = SubResource( 2 )
+skeleton = NodePath("")
 
-[connection signal="body_entered" from="RigidBody" to="." method="_on_RigidBody_body_entered"]
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
