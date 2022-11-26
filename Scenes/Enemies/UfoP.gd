@@ -2,7 +2,7 @@ extends Spatial
 
 #TODO: tunar
 var SPEED = 0.5 #5.0
-var DMG = 5
+var DMG = 1
 
 #var path = []
 export(NodePath) var alvoPath
@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 	
 	#Move object
 	global_transform.origin += direction * step_size  #?navigation_agent.set_velocity(global_transform.origin) for colision avoidence
-	
+	global_transform.origin.y = .5
 	#rotate for animation
 	rotate_y(deg2rad(90*delta))
 	
@@ -60,7 +60,14 @@ func kamikazeee():
 	#var hud = get_tree().call_group("hud","lossLife")
 
 
+
+
 func _on_RigidBody_input_event(camera: Node, event: InputEvent, position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		print("mouse click ufo")
+		print("mouse click ufo ")
+	pass # Replace with function body.
+
+
+func _on_RigidBody_body_entered(body: Node) -> void:
+	print("somenting enter rigid body")
 	pass # Replace with function body.

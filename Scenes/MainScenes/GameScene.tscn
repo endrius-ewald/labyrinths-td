@@ -32,7 +32,7 @@ script = ExtResource( 1 )
 [node name="Level" parent="." instance=ExtResource( 2 )]
 
 [node name="OrthoCam" type="Camera" parent="."]
-transform = Transform( 0.979926, -0.069412, 0.186886, 0.00145627, 0.939897, 0.341456, -0.199354, -0.334329, 0.921131, 8.60067, 3.50815, 2.64474 )
+transform = Transform( 0.745468, -0.23015, 0.625546, 0.00145868, 0.939057, 0.343758, -0.666539, -0.255348, 0.700373, 10.11, 3.508, 2.645 )
 visible = false
 current = true
 

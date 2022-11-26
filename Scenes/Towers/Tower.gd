@@ -23,7 +23,7 @@ func _on_Range_body_entered(body: Node) -> void:
 	enemies.append(body)
 	
 	if $ShootTimer.is_stopped():
-#		$ShootTimer.start()
+		$ShootTimer.start()
 		pass
 	#print(enemies)
 	pass # Replace with function body.

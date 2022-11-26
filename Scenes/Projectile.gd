@@ -5,8 +5,8 @@ extends Spatial
 # var a: int = 2
 # var b: String = "text"
 var target 
-var SPEED = 2
-
+var SPEED = 10
+var dmg = 40
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,15 +15,18 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var step_size = delta * SPEED
 	
-	if target:
-		var nextLocation = target.global_transform.origin
+	if is_instance_valid(target):
+		var nextLocation = target.global_translation
 		
 		#Get direction based on next location
-		var direction = global_transform.origin.direction_to(nextLocation)
+#		var direction = global_transform.origin.direction_to(nextLocation)
 		
 		#Move object
-		global_transform.origin += direction * step_size
+#		global_transform.origin += direction * step_size
 	
+		global_transform.origin = global_transform.origin.move_toward(nextLocation, step_size)
+	else:
+		queue_free()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -25,6 +25,7 @@ https://youtu.be/ugNRDsl33OI?list=PLZ-54sd-DMAJltIzTtZ6ZhC-9hkqYXyp6
 
 UI CONTROL:
 Precisa setar a propriedade mouse filter pra ignore pra poder usar a UI e clicar no jogo por baixo. 
+https://youtu.be/yrWh7ed-iqo
 
 CLICK_3D:
 
@@ -36,4 +37,26 @@ Ou pode tambem usar o signal input_event de colision_object que colide com o map
 https://www.youtube.com/watch?v=U5qGj8qt7VU&t=80s&ab_channel=DavetheDev
 
 MOB_SPAWN:
+https://docs.godotengine.org/en/3.5/getting_started/first_2d_game/05.the_main_game_scene.html?highlight=timer#the-main-game-scene
+
+SIGNALS:
+https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html
+
+$Child.connect("signal_name", object_with_method, "method_on_the_object")
+<emitting_node>.connect("signal_name", <target_node>, "target_method_name")
+
+
+GLOBAL(SINGLETONS)
+https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html?highlight=autoload
+
+signal via global
+https://godotengine.org/qa/46747/connecting-signal-from-another-scene
+
+HANDLE_NULL:
+https://godotengine.org/qa/33196/how-are-you-supposed-to-handle-null-objects
+
+PHYSICS:
+https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html
+https://godotengine.org/qa/13955/how-can-i-decide-to-bodies-rigid-kinematic-or-static
+https://www.youtube.com/watch?v=xsAyx2r1bQU&ab_channel=KidsCanCode
 

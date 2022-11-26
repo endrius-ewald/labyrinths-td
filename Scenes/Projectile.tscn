@@ -13,7 +13,8 @@ height = 0.1
 script = ExtResource( 1 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-gravity_scale = 0.0
+mode = 3
+axis_lock_linear_y = true
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 1 )
