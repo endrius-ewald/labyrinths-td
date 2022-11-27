@@ -89,7 +89,7 @@ func _on_Area_area_entered(area: Area) -> void:
 		var v = area.get_parent()
 		receive_damage(v.dmg)
 		print("hited by ")
-		
+
 		
 #	print(area.collision_layer)
 		

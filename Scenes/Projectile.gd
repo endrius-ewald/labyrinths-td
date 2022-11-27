@@ -5,7 +5,7 @@ extends Spatial
 # var a: int = 2
 # var b: String = "text"
 var target 
-var SPEED = 10
+var SPEED = 6
 var dmg = 40
 
 signal hit(_dmg)

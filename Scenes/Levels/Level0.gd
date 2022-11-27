@@ -11,7 +11,8 @@ signal gameWon
 
 onready var mob_container = $Navigation/EnemieContainer
 onready var target = $Target
-onready var mob_scene = preload("res://Scenes/Enemies/UfoP.tscn")
+onready var ufoP = preload("res://Scenes/Enemies/UfoP.tscn")
+onready var ufoG = preload("res://Scenes/Enemies/UfoG.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,12 +56,27 @@ func _on_MobTimer_timeout() -> void:
 	else:
 		$MobTimer.stop()
 	
-	$MobTimer.wait_time = rand_range(1,3)#spawna um mob entre 0 e 3 segundos. Pode ser modificado para variar dificuldade
+	$MobTimer.wait_time = rand_range(0.5,2.5)#spawna um mob entre segundos. Pode ser modificado para variar dificuldade
 	
 	var mob_position_x = randi() % 7 + 2#posiciona o mob em algum lugar ao longo do eixo X do mapa
 	
-	var le_mob = mob_scene.instance()
+	var mob_tipe = rand_range(0,1)
 	
+	var le_mob
+	if(mob_tipe > 0.8):
+		#mobred
+		le_mob = ufoG.instance()
+		pass
+	elif mob_tipe > 0.6 and mob_tipe < 0.8:
+		#mobgree
+		le_mob = ufoG.instance()
+		pass
+	else:
+		#mobP
+		le_mob = ufoP.instance()
+		
+#	le_mob=ufoG.instance()
+		
 	#le_mob.alvo = target
 	le_mob.alvoPath = target.get_path()
 	
