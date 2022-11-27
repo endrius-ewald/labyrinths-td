@@ -72,7 +72,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mouse") and can_build:
 		if !in_menu:
 			in_menu = true
+#			var m = build_menu.instance()
 			var m = build_menu.instance()
+			m.init(ui.cash)
 			m.rect_position = mouse_pos
 			ui.add_child(m)
 			#createTower()
@@ -85,10 +87,12 @@ func build_tower(arg):
 	print("build le tower ", arg)
 	match arg:
 		0:
+			ui.cash-=300
 			var tower = tscn.instance()
 			tower.translation = selection_position
 			level.get_node("Navigation").get_node("NavigationMeshInstance").get_node("TowerContainer").add_child(tower)
 		1:
+			ui.cash-=500
 			var tower = tscn.instance()
 			tower.translation = selection_position
 			level.get_node("Navigation").get_node("NavigationMeshInstance").get_node("TowerContainer").add_child(tower)

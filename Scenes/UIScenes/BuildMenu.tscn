@@ -8,5 +8,5 @@
 margin_right = 73.0
 margin_bottom = 56.0
 mouse_filter = 1
-items = [ "TORRE 1", ExtResource( 2 ), 0, false, false, 0, 0, null, "", false, "TORRE 2", ExtResource( 3 ), 0, false, false, 1, 0, null, "", false ]
+items = [ "300", ExtResource( 2 ), 0, false, true, 0, 0, null, "", false, "500", ExtResource( 3 ), 0, false, true, 1, 0, null, "", false ]
 script = ExtResource( 1 )

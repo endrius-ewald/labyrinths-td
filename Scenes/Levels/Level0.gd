@@ -4,9 +4,10 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
-var numEnemies = 10
+var numEnemies = 30
 var matchTime = 0
 
+signal gameWon
 
 onready var mob_container = $Navigation/EnemieContainer
 onready var target = $Target
@@ -33,8 +34,18 @@ func _on_MatchTimer_timeout() -> void:
 	matchTime+=1
 	print(matchTime)
 	if mob_container.get_child_count() <= 0:
-		print("GAME WIN")
+		if $EndTimer.is_stopped():
+			$EndTimer.start()
+	else:
+		$EndTimer.stop()
 	pass # Replace with function body.
+	
+
+func _on_EndTimer_timeout() -> void:
+	print("GAME WIN")
+	emit_signal("gameWon")
+	pass # Replace with function body.
+
 
 func _on_MobTimer_timeout() -> void:
 	print("SpawnMob")
@@ -44,7 +55,7 @@ func _on_MobTimer_timeout() -> void:
 	else:
 		$MobTimer.stop()
 	
-	$MobTimer.wait_time = rand_range(1,1)#,3)#spawna um mob entre 0 e 3 segundos. Pode ser modificado para variar dificuldade
+	$MobTimer.wait_time = rand_range(1,3)#spawna um mob entre 0 e 3 segundos. Pode ser modificado para variar dificuldade
 	
 	var mob_position_x = randi() % 7 + 2#posiciona o mob em algum lugar ao longo do eixo X do mapa
 	
@@ -61,3 +72,4 @@ func _on_MobTimer_timeout() -> void:
 	
 	mob_container.add_child(le_mob)
 	pass # Replace with function body.
+

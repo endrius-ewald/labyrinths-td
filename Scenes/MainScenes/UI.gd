@@ -4,13 +4,18 @@ extends CanvasLayer
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
+var bill
 onready var lifes = 50
-onready var cash = 100
+onready var cash = 400
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$HUD/Lifes.text = "Lifes: " + str(lifes)
 	$HUD/Cash.text = "Cash: " + str(cash)
+	
+	var lvl = get_parent().get_node("Level")
+	
+	lvl.connect("gameWon",self,"gameWon")
 #	print("num enemies: ", get_tree().get_nodes_in_group("enemies").size())
 ##	<emitting_node>.connect("signal_name", <target_node>, "target_method_name")
 #	for e in get_tree().get_nodes_in_group("enemies"):
@@ -33,6 +38,16 @@ func cashIn(amount):
 func gameOver():
 	var handler = self.get_parent().get_parent()
 	var res = ResourceLoader.load("res://Scenes/UIScenes/GameOver.tscn")
+	var nextScene = res.instance()
+	
+	handler.get_node("GameScene").queue_free()
+	handler.add_child(nextScene)
+	
+	pass
+	
+func gameWon():
+	var handler = self.get_parent().get_parent()
+	var res = ResourceLoader.load("res://Scenes/UIScenes/GameWon.tscn")
 	var nextScene = res.instance()
 	
 	handler.get_node("GameScene").queue_free()

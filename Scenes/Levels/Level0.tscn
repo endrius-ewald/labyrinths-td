@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Towers/Tower.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Meshlibs/kenneytd.old.meshlib" type="MeshLibrary" id=2]
 [ext_resource path="res://Scenes/Enemies/UfoP.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Levels/Level1.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Levels/Level0.gd" type="Script" id=4]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.541176, 0.121569, 0.027451, 1 )
@@ -111,7 +111,11 @@ autostart = true
 
 [node name="MatchTimer" type="Timer" parent="."]
 
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="bake_finished" from="Navigation/NavigationMeshInstance" to="Navigation/NavigationMeshInstance/TowerContainer/Tower" method="_on_NavigationMeshInstance_bake_finished"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
 [connection signal="timeout" from="MatchTimer" to="." method="_on_MatchTimer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_EndTimer_timeout"]
