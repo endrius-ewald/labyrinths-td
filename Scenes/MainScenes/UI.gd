@@ -58,3 +58,13 @@ func gameWon():
 	
 #func _unhandled_input(event: InputEvent) -> void:
 #	pass
+
+
+func _on_Button_pressed() -> void:
+	if get_tree().paused:
+		$HUD/PauseBtn.text = "PAUSE"
+		get_tree().paused = false
+	else:
+		$HUD/PauseBtn.text = "PLAY"
+		get_tree().paused = true
+	pass # Replace with function body.
