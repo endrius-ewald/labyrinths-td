@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=2]
+[gd_scene load_steps=147 format=2]
 
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/detail_crystal.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/detail_tree.obj" type="ArrayMesh" id=2]
@@ -146,10 +146,6 @@
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/woodStructure.obj" type="ArrayMesh" id=144]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerSquare_topC.obj" type="ArrayMesh" id=145]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerSquare_topB.obj" type="ArrayMesh" id=146]
-[ext_resource path="res://Scenes/Towers/towerSquare_sampleD.gd" type="Script" id=147]
-
-[sub_resource type="SphereShape" id=1]
-radius = 3.0045
 
 [node name="Spatial" type="Spatial"]
 
@@ -558,12 +554,6 @@ mesh = ExtResource( 139 )
 [node name="towerSquare_sampleD" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4 )
 mesh = ExtResource( 134 )
-script = ExtResource( 147 )
-
-[node name="Range" type="Area" parent="towerSquare_sampleD"]
-
-[node name="CollisionShape" type="CollisionShape" parent="towerSquare_sampleD/Range"]
-shape = SubResource( 1 )
 
 [node name="towerSquare_sampleE" type="MeshInstance" parent="."]
 mesh = ExtResource( 133 )
@@ -597,6 +587,3 @@ mesh = ExtResource( 144 )
 
 [node name="woodStructure_high" type="MeshInstance" parent="."]
 mesh = ExtResource( 130 )
-
-[connection signal="body_entered" from="towerSquare_sampleD/Range" to="towerSquare_sampleD" method="_on_Range_body_entered"]
-[connection signal="body_exited" from="towerSquare_sampleD/Range" to="towerSquare_sampleD" method="_on_Range_body_exited"]

@@ -88,4 +88,10 @@ text = "PAUSE"
 mesh = SubResource( 2 )
 material/0 = SubResource( 4 )
 
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.774133, 0.412033, -0.48057, -0.0854754, 0.820252, 0.56558, 0.627226, -0.396757, 0.670202, 0, 5.96206, 0 )
+visible = false
+light_energy = 0.529
+shadow_enabled = true
+
 [connection signal="pressed" from="UI/HUD/PauseBtn" to="UI" method="_on_Button_pressed"]

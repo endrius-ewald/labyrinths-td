@@ -73,3 +73,8 @@ func _on_MobTimer_timeout() -> void:
 	mob_container.add_child(le_mob)
 	pass # Replace with function body.
 
+
+
+func _on_NavigationMeshInstance_bake_finished() -> void:
+	print("BAKE FINISHED")
+	pass # Replace with function body.

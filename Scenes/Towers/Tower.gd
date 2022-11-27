@@ -35,11 +35,6 @@ func _ready() -> void:
 #	pass # Replace with function body.
 #
 
-func _on_NavigationMeshInstance_bake_finished() -> void:
-	print("BAKE FINISHED")
-	pass # Replace with function body.
-
-
 func _on_ShootTimer_timeout() -> void:
 
 	if(enemies.size() > 0):

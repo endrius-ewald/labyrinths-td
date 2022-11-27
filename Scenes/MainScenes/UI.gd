@@ -6,7 +6,7 @@ extends CanvasLayer
 # var b: String = "text"
 var bill
 onready var lifes = 50
-onready var cash = 400
+onready var cash = 1000#400
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

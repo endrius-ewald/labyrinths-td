@@ -15,7 +15,8 @@ var mouse_pos
 
 
 var build_menu = preload("res://Scenes/UIScenes/BuildMenu.tscn")
-var tscn = load("res://Scenes/Towers/Tower.tscn")
+var towB = load("res://Scenes/Towers/Tower.tscn")
+var towR = load("res://Scenes/Towers/TowerR.tscn")
 
 
 
@@ -88,17 +89,17 @@ func build_tower(arg):
 	match arg:
 		0:
 			ui.cash-=300
-			var tower = tscn.instance()
+			var tower = towB.instance()
 			tower.translation = selection_position
 			level.get_node("Navigation").get_node("NavigationMeshInstance").get_node("TowerContainer").add_child(tower)
 		1:
 			ui.cash-=500
-			var tower = tscn.instance()
+			var tower = towR.instance()
 			tower.translation = selection_position
 			level.get_node("Navigation").get_node("NavigationMeshInstance").get_node("TowerContainer").add_child(tower)
 			
 	#Desabilita construção na tile ja construida
-	gMap.set_cell_item(p.x,p.y,p.z,-1)
+	gMap.set_cell_item(p.x,p.y,p.z,73)#73
 	
 	clean_build_menu()
 	in_menu = false
