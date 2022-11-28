@@ -49,6 +49,7 @@ func _process(delta: float) -> void:
 
 func _on_NavigationAgent_target_reached():
 	kamikazeee()
+	yield($AudioStreamPlayer3D, "finished")
 	queue_free()
 	pass # Replace with function body.
 
@@ -56,6 +57,9 @@ func kamikazeee():
 	print("KAMIKAZEE")
 	#1
 	emit_signal("kamikaze",DMG)
+	
+	$AudioStreamPlayer3D.play()
+	
 	
 	#2
 	#var group = get_tree().get_nodes_in_group("hud")

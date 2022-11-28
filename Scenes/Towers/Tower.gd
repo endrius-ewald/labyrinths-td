@@ -48,9 +48,9 @@ func _on_ShootTimer_timeout() -> void:
 		bullet.global_transform.origin = global_transform.origin
 		bullet.global_transform.origin.y = 2
 		
-
-
 		bullet.target = enemies[0]
+		
+		$AudioStreamPlayer3D.play()
 	else:
 		$ShootTimer.stop()
 	
