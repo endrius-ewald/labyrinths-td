@@ -10,7 +10,7 @@ var proj = preload("res://Scenes/Projectile.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("tower readyyy")
+	#print("tower readyyy")
 	pass # Replace with function body.
 
 
@@ -46,11 +46,11 @@ func _on_ShootTimer_timeout() -> void:
 		add_child(bullet)
 		
 		bullet.global_transform.origin = global_transform.origin
-		bullet.global_transform.origin.y = 2
+		bullet.global_transform.origin.y = 1.5
 		
 		bullet.target = enemies[0]
 		
-		$AudioStreamPlayer3D.play()
+		$AudioStreamPlayer.play()
 	else:
 		$ShootTimer.stop()
 	

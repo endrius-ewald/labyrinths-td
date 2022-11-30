@@ -5,6 +5,11 @@ extends Spatial
 # var a: int = 2
 # var b: String = "text"
 var numEnemies = 30
+var cash = 400
+var loSpawn = 0.5
+var hiSpawn = 2.5
+
+
 var matchTime = 0
 
 signal gameWon
@@ -49,16 +54,16 @@ func _on_EndTimer_timeout() -> void:
 
 
 func _on_MobTimer_timeout() -> void:
-	print("SpawnMob")
+	#print("SpawnMob")
 	
 	if numEnemies > 0:
 		numEnemies-=1
 	else:
 		$MobTimer.stop()
 	
-	$MobTimer.wait_time = rand_range(0.5,2.5)#spawna um mob entre segundos. Pode ser modificado para variar dificuldade
+	$MobTimer.wait_time = rand_range(loSpawn,hiSpawn)#spawna um mob entre segundos. Pode ser modificado para variar dificuldade
 	
-	var mob_position_x = randi() % 7 + 2#posiciona o mob em algum lugar ao longo do eixo X do mapa
+	var mob_position_x = randi() % 8 + 1#posiciona o mob em algum lugar ao longo do eixo X do mapa
 	
 	var mob_tipe = rand_range(0,1)
 	

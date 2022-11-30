@@ -49,16 +49,17 @@ func _process(delta: float) -> void:
 
 func _on_NavigationAgent_target_reached():
 	kamikazeee()
-	yield($AudioStreamPlayer3D, "finished")
+	visible = false;
+	yield($AudioStreamPlayer2, "finished")
 	queue_free()
 	pass # Replace with function body.
 
 func kamikazeee():
-	print("KAMIKAZEE")
+	#print("KAMIKAZEE")
 	#1
 	emit_signal("kamikaze",DMG)
 	
-	$AudioStreamPlayer3D.play()
+	$AudioStreamPlayer2.play()
 	
 	
 	#2
@@ -71,7 +72,7 @@ func kamikazeee():
 func receive_damage(amout):
 	LIFE -= amout
 	if LIFE <= 0:
-		print("im dead")
+		#print("im dead")
 		emit_signal("die",value)
 		queue_free()
 	pass
@@ -92,7 +93,7 @@ func _on_Area_area_entered(area: Area) -> void:
 	if area.collision_layer == 8:
 		var v = area.get_parent()
 		receive_damage(v.dmg)
-		print("hited by ")
+		#print("hited by ")
 
 		
 #	print(area.collision_layer)

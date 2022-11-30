@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Destiny.mp3-cddd086f1668b1f1eaff4e0d2ea4476b.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Destiny.mp3"
+dest_files=[ "res://.import/Destiny.mp3-cddd086f1668b1f1eaff4e0d2ea4476b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

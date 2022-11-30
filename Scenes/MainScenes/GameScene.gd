@@ -29,6 +29,9 @@ func _ready() -> void:
 	gMap = level.get_node("Navigation").get_node("NavigationMeshInstance").get_node("GridMap")
 	cam = get_viewport().get_camera()	
 	
+	color_wall()
+	
+	ui.cash = level.cash
 	pass # Replace with function body.
 
 
@@ -165,3 +168,20 @@ func createTower():
 	
 	pass
 	
+func color_wall():
+	
+	$Wall/MeshInstance.get_surface_material(0).set_shader_param("color",Color.black)
+	var material = $Wall/MeshInstance.get_surface_material(0)
+	
+	$Wall/MeshInstance2.set_surface_material(0,material)
+	$Wall/MeshInstance3.set_surface_material(0,material)
+	$Wall/MeshInstance4.set_surface_material(0,material)
+	$Wall/MeshInstance5.set_surface_material(0,material)
+	$Wall/MeshInstance6.set_surface_material(0,material)
+	$Wall/MeshInstance7.set_surface_material(0,material)
+	$Wall/MeshInstance8.set_surface_material(0,material)
+	$Wall/MeshInstance9.set_surface_material(0,material)
+	$Wall/MeshInstance10.set_surface_material(0,material)
+	
+
+	pass

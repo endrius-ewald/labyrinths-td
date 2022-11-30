@@ -5,13 +5,12 @@ extends CanvasLayer
 # var a: int = 2
 # var b: String = "text"
 var bill
-onready var lifes = 50
-onready var cash = 1000#400
+onready var lifes = 10
+var cash
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$HUD/Lifes.text = "Lifes: " + str(lifes)
-	$HUD/Cash.text = "Cash: " + str(cash)
+	
 	
 	var lvl = get_parent().get_node("Level")
 	
@@ -22,6 +21,12 @@ func _ready() -> void:
 #		e.connect("kamikaze", self, "lossLife")
 		
 	pass # Replace with function body.
+
+func _process(delta: float) -> void:
+	$HUD/Lifes.text = "Lifes: " + str(lifes)
+	$HUD/Cash.text = "Cash: " + str(cash)
+	pass
+
 
 func lossLife(dmg):
 	lifes -= dmg
