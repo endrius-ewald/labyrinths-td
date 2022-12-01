@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/MainScenes/GameScene.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Levels/Level0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Levels/Level1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/MainScenes/UI.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Libs/kenney_towerDefense/Models/OBJ format/towerSquare_topB.obj" type="ArrayMesh" id=5]
@@ -36,7 +36,7 @@ void fragment(){
 shader = SubResource( 3 )
 shader_param/color = Color( 0.631373, 0.654902, 0.145098, 1 )
 
-[sub_resource type="Shader" id=7]
+[sub_resource type="Shader" id=9]
 code = "shader_type spatial;
 
 uniform vec4 color: hint_color;
@@ -47,7 +47,7 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=8]
-shader = SubResource( 7 )
+shader = SubResource( 9 )
 shader_param/color = null
 
 [node name="GameScene" type="Spatial"]
@@ -76,6 +76,7 @@ mouse_default_cursor_shape = 2
 [node name="Lifes" type="Label" parent="UI/HUD"]
 margin_right = 40.0
 margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Lifes: -1"
 
@@ -85,6 +86,7 @@ anchor_right = 1.0
 margin_left = -133.0
 margin_bottom = 37.0
 grow_horizontal = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "Cash: -1"
 align = 2

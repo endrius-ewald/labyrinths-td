@@ -7,6 +7,7 @@ extends CanvasLayer
 var bill
 onready var lifes = 10
 var cash
+var game = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -52,17 +53,40 @@ func gameOver():
 	
 func gameWon():
 	var handler = self.get_parent().get_parent()
-	var res = ResourceLoader.load("res://Scenes/UIScenes/GameWon.tscn")
-	var nextScene = res.instance()
+	var res
 	
-	handler.get_node("GameScene").queue_free()
-	handler.add_child(nextScene)
-	
+	if(game == 3):
+		res = ResourceLoader.load("res://Scenes/UIScenes/GameWon.tscn")
+		var nextScene = res.instance()
+		handler.get_node("GameScene").queue_free()
+		handler.add_child(nextScene)
+		
+	else:
+		res = ResourceLoader.load("res://Scenes/UIScenes/GameNext.tscn")
+		var scene = res.instance()
+		handler.get_node("GameScene").get_node("UI/HUD").visible = false
+		handler.get_node("GameScene").get_node("UI").add_child(scene)
+		game+=1
 	
 	pass
 	
 #func _unhandled_input(event: InputEvent) -> void:
 #	pass
+
+func loadNextMap():
+	var handler = self.get_parent().get_parent()
+	handler.get_node("GameScene").get_node("UI").get_node("GameNext").queue_free()
+	handler.get_node("GameScene").get_node("Level").free()
+	
+	var res = ResourceLoader.load("res://Scenes/Levels/Level"+str(game)+".tscn")
+	var level = res.instance()
+	
+	handler.get_node("GameScene").get_node("UI/HUD").visible = true
+	handler.get_node("GameScene").add_child(level)
+	handler.get_node("GameScene")._ready()
+	self._ready()
+	
+	pass
 
 
 func _on_Button_pressed() -> void:
