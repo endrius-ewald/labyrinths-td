@@ -38,7 +38,10 @@ func _process(delta: float) -> void:
 
 func _on_NavigationAgent_navigation_finished() -> void:
 	#kills itself on the wall
-	emit_signal("kamikaze",DMG)
+	emit_signal("kamikaze",DMG) #emite sinal para notificar a muralha
+	$AudioStreamPlayer2.play() #toca baruhlo da explosao
+	visible = false; #retira visibilidade
+	yield($AudioStreamPlayer2, "finished") #espera animacao terminar para sair da arvore
 	queue_free()
 	
 	

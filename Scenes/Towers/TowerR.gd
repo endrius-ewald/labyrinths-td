@@ -28,6 +28,8 @@ func _on_ShootTimer_timeout() -> void:
 		
 		bullet.target = enemies[0]#append target
 		
+		$AudioStreamPlayer.play()#executa o audio do projetil
+				
 		add_child(bullet)#first add to tree, later transform
 		
 		bullet.global_transform.origin = global_transform.origin

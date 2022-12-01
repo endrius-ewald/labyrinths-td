@@ -4,10 +4,10 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
-var numEnemies = 2#50
+var numEnemies = 50
 var cash = 500
 var loSpawn = 0.7
-var hiSpawn = 1.9
+var hiSpawn = 1.8
 
 
 var matchTime = 0
